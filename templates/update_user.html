@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update User</title>
+</head>
+<body>
+    <h2>Update User</h2>
+    <form action="{{ url_for('update_user', user_id=user[0]) }}" method="POST">
+        <label for="new_name">First Name: </label>
+        <input type="text" name="new_name" value="{{ user[1] }}" required><br>
+        <label for="new_surname">Last Name: </label>
+        <input type="text" name="new_surname" value="{{ user[2] }}" required><br>
+        <label for="new_email">Email: </label>
+        <input type="email" name="new_email" value="{{ user[3] }}" required><br>
+        <input type="submit" value="Update User">
+    </form>
+</body>
+</html>
